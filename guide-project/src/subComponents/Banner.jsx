@@ -1,4 +1,3 @@
-import NavBar from '../componets/NavBar'
 import styles from './Banner.module.css'
 
 

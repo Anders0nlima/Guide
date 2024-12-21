@@ -10,7 +10,7 @@ function AppRoutes(){
  return(
    <BrowserRouter> 
       <Routes>
-        <Route path="/teste-router" element={<HomePage/>}>
+        <Route path="/Guide" element={<HomePage/>}>
 
         </Route>
 

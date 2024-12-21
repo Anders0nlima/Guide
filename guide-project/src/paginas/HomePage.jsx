@@ -1,6 +1,9 @@
-import Conteudo from "../componets/conteudo";
-import Footer from "../componets/Footer";
-import NavBar from "../componets/NavBar";
+import Conteudo from "../components/Conteudo";
+import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
+
+
+
 
 function HomePage(){
  return(
