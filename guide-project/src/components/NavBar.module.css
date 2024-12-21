@@ -1,0 +1,46 @@
+.list{
+    display: flex;
+    background-color: #35c0c8;
+    padding: 15px;
+}
+
+.item {
+ font-size: 20px;
+ text-decoration: none;
+ color: white;
+ transition: 0.4s;
+ 
+}
+
+.item:hover{
+  color: rgb(234, 234, 234);
+  transform: scale(1.2);
+}
+
+.item:active{
+  transform: scale(0.8);
+}
+
+
+.logo {
+  flex: 1; 
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.centerLinks {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  gap: 50px; 
+}
+
+
+.rightLinks {
+  flex: 1; 
+  display: flex;
+  justify-content: flex-end; 
+  gap: 50px; 
+}
+
