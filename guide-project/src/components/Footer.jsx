@@ -6,18 +6,28 @@ import calendario from '../components/imagem/calendario3.jpeg'
 import gamifica from '../components/imagem/gamificação3.jpeg'
 import guide from '../components/imagem/guia3.jpeg'
 import mapa from '../components/imagem/mapa3.jpeg'
+import { useState } from 'react'
+import LoginPage from '../paginas/LoginPage'
 
 
 function Footer(){
+   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+   const handleOpenModal = () => setIsLoginModalOpen(true);
+
+   const handleCloseModal = () => setIsLoginModalOpen(false);
+
   return(
     <div className={styles.principal}>
 
             <div className={styles.espacoLinks}>
-
+                 {/*botao login com modal*/}
                 <div className={styles.link}>
 
                    <div className={styles.botao}>
-                   <Img id="login" imagem={login} to="/login" />
+                   <button onClick={handleOpenModal} className={styles.modalButton}> 
+                    <Img id="login" imagem={login}/> </button>
+
                      
                    </div>
 
@@ -26,6 +36,8 @@ function Footer(){
                   </div>
 
                 </div>
+
+ 
 
                 <div className={styles.link}>
 
@@ -38,6 +50,21 @@ function Footer(){
                   </div>
 
                 </div>
+
+                {/*Modal para login*/}
+                {isLoginModalOpen && (
+                  <div className={styles.modalOverlay}>
+                    <div className={styles.modal}>
+                      <button onClick={handleCloseModal} className={styles.closeModal}>
+                        fechar
+                      </button>
+
+                      <LoginPage/>
+
+                    </div>
+
+                  </div>
+                )}
 
                 <div className={styles.link}>
 
