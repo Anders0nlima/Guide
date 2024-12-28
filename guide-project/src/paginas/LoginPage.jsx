@@ -4,6 +4,8 @@ import axios from 'axios';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
+import { Link } from 'react-router-dom'
+
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -35,7 +37,7 @@ const LoginPage = () => {
         </div>
         <Button label="Entrar" type="submit" />
       </form>
-      <p>Não tem uma conta? <a href="/register">Cadastre-se</a></p>
+      <p>Não tem uma conta? <Link to="/registrar">Cadastre-se</Link></p>
     </div>
   );
 };
