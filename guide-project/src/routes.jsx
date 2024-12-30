@@ -3,6 +3,7 @@ import HomePage from "./paginas/HomePage"
 import RegisterPage from "./paginas/RegisterPage"
 import LoginPage from "./paginas/LoginPage"
 import GuideDetails from "./paginas/GuideDetailsPage"
+import EntradaPage from "./paginas/EntradaPage"
 
 
 
@@ -10,7 +11,11 @@ function AppRoutes(){
  return(
    <BrowserRouter> 
       <Routes>
-        <Route path="/Guide" element={<HomePage/>}>
+        <Route path="/Guide" element={<EntradaPage/>}>
+
+        </Route>
+
+        <Route path="/entrada" element={<HomePage/>}>
 
         </Route>
 

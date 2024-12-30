@@ -168,6 +168,7 @@ form input:focus {
 }
 
 
+/*HomePage*/
 .home-page {
   text-align: center;
   padding: 40px;
@@ -230,7 +231,7 @@ form input:focus {
   margin-top: 15px;
 }
 
-
+/*GuideDetailsPage*/
 .guide-details-page {
   padding: 40px;
 }
@@ -268,4 +269,19 @@ form input:focus {
 
 .back-button:hover {
   background-color: #357ABD;
+}
+
+/*GuideDetailsPage*/
+.entrada-container{
+  display: flex;
+  
+} 
+
+.entrada-imagem{
+  background-color: #35C0C8;
+  width: 50%;
+}
+
+.entrada-login{
+  width: 700px;
 }

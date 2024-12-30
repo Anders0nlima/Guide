@@ -15,9 +15,10 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/usuario', { email, senha });
+      const response = await axios.post('http://localhost:8080/usuario/login', { email, senha });
+      alert('Login realizado com sucesso!');
       localStorage.setItem('token', response.data.token); // Salva o token no localStorage
-      navigate('/home'); // Redireciona para a home
+      navigate('/entrada'); // Redireciona para a home
     } catch (error) {
       alert('Login falhou. Verifique suas credenciais.');
     }

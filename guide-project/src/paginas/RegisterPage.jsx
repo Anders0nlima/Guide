@@ -16,7 +16,7 @@ const RegisterPage = () => {
     try {
       await axios.post('http://localhost:8080/usuario', { nome, email, senha });
       alert('Cadastro realizado com sucesso!');
-      navigate('/'); // Redireciona para o login
+      navigate('/Guide'); // Redireciona para o login
     } catch (error) {
       alert('Erro ao cadastrar. Tente novamente.');
     }
