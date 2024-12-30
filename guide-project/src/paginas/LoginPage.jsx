@@ -9,13 +9,13 @@ import { Link } from 'react-router-dom'
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [senha, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/login', { email, password });
+      const response = await axios.post('http://localhost:8080/usuario', { email, senha });
       localStorage.setItem('token', response.data.token); // Salva o token no localStorage
       navigate('/home'); // Redireciona para a home
     } catch (error) {
@@ -33,7 +33,7 @@ const LoginPage = () => {
         </div>
         <div className="field">
           <label>Senha</label>
-          <Password value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Digite sua senha" />
+          <Password value={senha} onChange={(e) => setPassword(e.target.value)} placeholder="Digite sua senha" />
         </div>
         <Button label="Entrar" type="submit" />
       </form>

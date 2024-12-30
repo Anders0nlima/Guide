@@ -6,15 +6,15 @@ import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
 
 const RegisterPage = () => {
-  const [name, setName] = useState('');
+  const [nome, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [senha, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/api/auth/register', { name, email, password });
+      await axios.post('http://localhost:8080/usuario', { nome, email, senha });
       alert('Cadastro realizado com sucesso!');
       navigate('/'); // Redireciona para o login
     } catch (error) {
@@ -28,7 +28,7 @@ const RegisterPage = () => {
       <form onSubmit={handleRegister}>
         <div className="field">
           <label>Nome</label>
-          <InputText value={name} onChange={(e) => setName(e.target.value)} placeholder="Digite seu nome" />
+          <InputText value={nome} onChange={(e) => setName(e.target.value)} placeholder="Digite seu nome" />
         </div>
         <div className="field">
           <label>Email</label>
@@ -36,7 +36,7 @@ const RegisterPage = () => {
         </div>
         <div className="field">
           <label>Senha</label>
-          <Password value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Digite sua senha" />
+          <Password value={senha} onChange={(e) => setPassword(e.target.value)} placeholder="Digite sua senha" />
         </div>
         <Button label="Cadastrar" type="submit" />
       </form>
