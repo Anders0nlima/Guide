@@ -16,11 +16,20 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:8080/usuario/login', { email, senha });
-      alert('Login realizado com sucesso!');
-      localStorage.setItem('token', response.data.token); // Salva o token no localStorage
-      navigate('/entrada'); // Redireciona para a home
+      if (response.status === 200){
+        alert('Login realizado com sucesso!');
+        localStorage.setItem('token', response.data.token); // Salva o token no localStorage
+        navigate('/entrada'); // Redireciona para a home
+      } else {
+        alert('Credenciais inválidas. Verifique seu email e senha.');
+      }
+      
     } catch (error) {
-      alert('Login falhou. Verifique suas credenciais.');
+      if(error.response && error.response.status === 401){
+        alert('Login falhou. Verifique suas credenciais.');
+      } else{
+        alert('Ocorreu um erro ao tentar fazer login. Tente novamente mais tarde.');
+      }
     }
   };
 
