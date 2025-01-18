@@ -42,7 +42,7 @@ function Footer(){
                 <div className={styles.link}>
 
                    <div className={styles.botao}>
-                     <Img id="game" imagem={gamifica} to="/game" />
+                     <Img id="game" imagem={gamifica} to="/GamePage"/>
                    </div>
 
                    <div className={styles.descricao}>

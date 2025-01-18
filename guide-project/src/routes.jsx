@@ -4,6 +4,7 @@ import RegisterPage from "./paginas/RegisterPage"
 import LoginPage from "./paginas/LoginPage"
 import GuideDetails from "./paginas/GuideDetailsPage"
 import EntradaPage from "./paginas/EntradaPage"
+import GamePage from "./paginas/GamePage"
 
 
 
@@ -24,6 +25,10 @@ function AppRoutes(){
         </Route>
 
         <Route path="/login" element={<LoginPage/>}>
+
+        </Route>
+
+        <Route path="/GamePage" element={<GamePage/>}>
 
         </Route>
 
