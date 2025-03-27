@@ -3,7 +3,7 @@ Travel Website - Full Stack Project
 # 🏝️ About the Project
 ### This is my first full-stack project with a higher level of complexity due to the backend communication using Java and PostgreSQL. The goal of this project is to create a travel website where users can explore different travel destinations, book trips, and manage their profiles.
 ---
-#🚀 Technologies Used
+# 🚀 Technologies Used
 ### - This project was built using the following technologies:
 
 ## Frontend
@@ -18,3 +18,6 @@ Travel Website - Full Stack Project
 ---
 # ⚠️ Important Note
 ### - This project only runs locally. The backend is not hosted on a public server, so you need to set up the environment on your machine to run the application.
+
+# 🔧 Backend Portfolio
+### I also created a separate backend portfolio project called LoginProject. You can find the backend made in Java in the repository called loginProject https://github.com/Anders0nlima/loginProject.
